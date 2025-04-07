@@ -7,7 +7,7 @@
 
 A modern web application for managing and organizing security writeups, built with the T3 Stack.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fitsmeashim%2Fwriteups&env=DATABASE_URL,BETTER_AUTH_SECRET,BETTER_AUTH_URL,ALLOW_REGISTRATION&envDescription=Environment%20variables%20needed%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2Fitsmeashim%2Fwriteups%2Fblob%2Fmain%2F.env.example)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fitsmeashim%2Fwriteups&env=DATABASE_URL,BETTER_AUTH_SECRET,BETTER_AUTH_URL,ALLOW_REGISTRATION&envDescription=DATABASE_URL%3A%20PostgreSQL%20connection%20string%20(e.g.%2C%20from%20Supabase%20or%20Neon).%20%20%20%20%20BETTER_AUTH_SECRET%3A%20Random%20key%20like%20X7K9P2M4Q8R5T1J3%20or%20generate%20via%20%60npx%20%40better-auth%2Fcli%40latest%20secret%60.%20%20%20%20%20BETTER_AUTH_URL%3A%20Your%20site%20URL%20(e.g.%2C%20https%3A%2F%2Fyourdomain.com).%20%20%20%20%20ALLOW_REGISTRATION%3A%20Set%20%60true%60%20for%20multi-user%2C%20%60false%60%20for%20single-user.%20%20%20%20%20&envLink=https%3A%2F%2Fgithub.com%2Fitsmeashim%2Fwriteups%2Fblob%2Fmain%2F.env.example)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/itsmeashim/writeups)
 

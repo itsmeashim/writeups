@@ -6,7 +6,7 @@ import { TextInput } from "~/components/form/text-input"
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useQueryClient } from "@tanstack/react-query"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { useEffect } from "react"
 import { toast } from "sonner"
 import { Button } from "~/components/ui/button"
@@ -21,6 +21,7 @@ export function RegisterForm({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   const router = useRouter()
+  const pathname = usePathname()
   const { data: session } = useSession()
 
   const form = useForm({
@@ -82,12 +83,14 @@ export function RegisterForm({
       <Button type='submit' className='w-full' loading={mutation.isPending}>
         Register
       </Button>
-      <p className='text-center text-sm'>
-        Already have an account?{" "}
-        <Link href='/login' className='text-primary underline'>
-          Login
-        </Link>
-      </p>
+      {pathname !== "/login" && (
+        <p className='text-center text-sm'>
+          Already have an account?{" "}
+          <Link href='/login' className='text-primary underline'>
+            Login
+          </Link>
+        </p>
+      )}
     </form>
   )
 }
