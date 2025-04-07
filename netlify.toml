@@ -1,0 +1,5 @@
+[template.environment]
+  DATABASE_URL = "PostgreSQL connection URL"
+  BETTER_AUTH_SECRET = "Secret key for authentication"
+  BETTER_AUTH_URL = "Your application's URL"
+  ALLOW_REGISTRATION = "Enable/disable user registration"

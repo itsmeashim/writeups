@@ -1,0 +1,6 @@
+- Folder Alias : ~/ not @/
+- Stack: Shadcn UI, Next.js, TypeScript, T3 Stack (Trpc)
+- ORM: Drizzle
+- Auth: BetterAuth
+
+Don't write Comments

@@ -1,0 +1,1 @@
+ALTER TABLE "writeup-app_writeup" ALTER COLUMN "bounty" SET DATA TYPE numeric;
