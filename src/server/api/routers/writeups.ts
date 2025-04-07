@@ -1,4 +1,4 @@
-import { and, desc, eq, inArray, like, or, sql } from "drizzle-orm"
+import { and, desc, eq, ilike, inArray, or, sql } from "drizzle-orm"
 import type { NodePgDatabase } from "drizzle-orm/node-postgres"
 import { z } from "zod"
 import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc"
@@ -254,8 +254,8 @@ export const writeupsRouter = createTRPCRouter({
       if (search) {
         conditions.push(
           or(
-            like(writeups.title, `%${search}%`),
-            like(writeups.link, `%${search}%`)
+            ilike(writeups.title, `%${search}%`),
+            ilike(writeups.link, `%${search}%`)
           )
         )
       }
@@ -603,7 +603,7 @@ export const writeupsRouter = createTRPCRouter({
 
       const conditions = [sql`${writeupAuthors.author} IS NOT NULL`]
       if (search) {
-        conditions.push(like(writeupAuthors.author, `%${search}%`))
+        conditions.push(ilike(writeupAuthors.author, `%${search}%`))
       }
 
       const query = ctx.db
@@ -645,7 +645,7 @@ export const writeupsRouter = createTRPCRouter({
 
       const conditions = [sql`${writeupPrograms.program} IS NOT NULL`]
       if (search) {
-        conditions.push(like(writeupPrograms.program, `%${search}%`))
+        conditions.push(ilike(writeupPrograms.program, `%${search}%`))
       }
 
       const query = ctx.db
@@ -687,7 +687,7 @@ export const writeupsRouter = createTRPCRouter({
 
       const conditions = [sql`${writeupBugs.bug} IS NOT NULL`]
       if (search) {
-        conditions.push(like(writeupBugs.bug, `%${search}%`))
+        conditions.push(ilike(writeupBugs.bug, `%${search}%`))
       }
 
       const query = ctx.db.query.writeupBugs.findMany({
